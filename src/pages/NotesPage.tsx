@@ -83,7 +83,7 @@ const NotesPage = () => {
           <LoadingComponent />
         ) : (
           <Container>
-            <Grid container spacing={3}>
+            <div className="space-y-5  md:columns-2 lg:columns-3 ">
               {storeNotes.map((note: noteObject) => (
                 <Grid key={note.createdAt} item xs={12} md={6} lg={4}>
                   <NotesCardComponent
@@ -94,7 +94,7 @@ const NotesPage = () => {
                   />
                 </Grid>
               ))}
-            </Grid>
+            </div>
           </Container>
         )}
       </div>
