@@ -13,6 +13,7 @@ import { Auth } from "firebase/auth";
 import { getFirestore, doc, deleteDoc } from "firebase/firestore";
 import "../App.css";
 import LoadingComponent from "../components/LoadingComponent";
+// import SearchBar from "../components/SearchBar";
 
 const db = getFirestore();
 export interface noteObject {
@@ -78,6 +79,7 @@ const NotesPage = () => {
 
   return (
     <>
+      {/* <SearchBar /> */}
       <div>
         {loading ? (
           <LoadingComponent />

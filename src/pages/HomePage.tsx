@@ -8,8 +8,10 @@ import { revokeAuthentication } from "../redux/firebase/authentication/authActio
 import { ReduxState } from "../redux";
 import { useNavigate } from "react-router-dom";
 
-const accent = "primary";
 const HomePage: FC = () => {
+  const accent = useSelector((state: ReduxState) => {
+    return state.userpreference.accent;
+  });
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const authState: boolean = useSelector((state: ReduxState) => {
